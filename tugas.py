@@ -35,8 +35,8 @@ if analysis == "3D Stress-Strain":
     if sym == "Isotropic":
         st.subheader("Isotropic")
         st.info("Isotropic: 2 independent elastic constants")
-        E = st.sidebar.number_input("E [GPa]", 0.0)
-        nu = st.sidebar.number_input("ν", 0.0)
+        E = st.sidebar.number_input("E [GPa]", 0.01)
+        nu = st.sidebar.number_input("ν", 0.01)
 
         S = np.array([
             [1/E,      -nu/E,  -nu/E,         0,                    0,                    0],
@@ -51,12 +51,12 @@ if analysis == "3D Stress-Strain":
     elif sym == "Transversely Isotropic":
         st.subheader("Transversely Isotropic")
         st.info("Transversely Isotropic: 5 independent elastic constants")
-        E1 = st.sidebar.number_input("E₁ [GPa]",0.0)
-        E2 = st.sidebar.number_input("E₂ [GPa]",0.0)
-        E3 = st.sidebar.number_input("E₃ [GPa]",0.0)
-        nu12 = st.sidebar.number_input("ν₁₂",0.0)
-        nu23 = st.sidebar.number_input("ν₂₃",0.0)
-        G12 = st.sidebar.number_input("G₁₂ [GPa]",0.0)
+        E1 = st.sidebar.number_input("E₁ [GPa]",0.01)
+        E2 = st.sidebar.number_input("E₂ [GPa]",0.01)
+        E3 = st.sidebar.number_input("E₃ [GPa]",0.01)
+        nu12 = st.sidebar.number_input("ν₁₂",0.01)
+        nu23 = st.sidebar.number_input("ν₂₃",0.01)
+        G12 = st.sidebar.number_input("G₁₂ [GPa]",0.01)
 
         S = np.array([
             [1/E1,      -nu12/E1,        -nu12/E1,        0,                  0,       0],
@@ -72,17 +72,17 @@ if analysis == "3D Stress-Strain":
     elif sym == "Orthotropic":
         st.subheader("Orthotropic")
         st.info("Orthotropic: 9 independent elastic constants")
-        E1 = st.sidebar.number_input("E₁ [GPa]",0.0)
-        E2 = st.sidebar.number_input("E₂ [GPa]",0.0)
-        E3 = st.sidebar.number_input("E₃ [GPa]",0.0)
+        E1 = st.sidebar.number_input("E₁ [GPa]",0.01)
+        E2 = st.sidebar.number_input("E₂ [GPa]",0.01)
+        E3 = st.sidebar.number_input("E₃ [GPa]",0.01)
 
-        nu12 = st.sidebar.number_input("ν₁₂",0.0)
-        nu23 = st.sidebar.number_input("ν₂₃",0.0)
-        nu31 = st.sidebar.number_input("ν₃₁",0.0)
+        nu12 = st.sidebar.number_input("ν₁₂",0.01)
+        nu23 = st.sidebar.number_input("ν₂₃",0.01)
+        nu31 = st.sidebar.number_input("ν₃₁",0.01)
 
-        G12 = st.sidebar.number_input("G₁₂ [GPa]",0.0)
-        G23 = st.sidebar.number_input("G₂₃ [GPa]",0.0)
-        G31 = st.sidebar.number_input("G₃₁ [GPa]",0.0)
+        G12 = st.sidebar.number_input("G₁₂ [GPa]",0.01)
+        G23 = st.sidebar.number_input("G₂₃ [GPa]",0.01)
+        G31 = st.sidebar.number_input("G₃₁ [GPa]",0.01)
 
 
         S = np.array([
