@@ -206,11 +206,11 @@ if analysis == "3D Stress-Strain":
 else:
     st.header("2D Angle Lamina")
 
-    E1 = st.sidebar.number_input("E₁ [GPa]",0.0)
-    E2 = st.sidebar.number_input("E₂ [GPa]",0.0)
-    nu12 = st.sidebar.number_input("ν₁₂",0.0)
-    G12 = st.sidebar.number_input("G₁₂ [GPa]",0.0)
-    theta = st.sidebar.number_input("θ [deg]",0.0)
+    E1 = st.sidebar.number_input("E₁ [GPa]",0.01)
+    E2 = st.sidebar.number_input("E₂ [GPa]",0.01)
+    nu12 = st.sidebar.number_input("ν₁₂",0.01)
+    G12 = st.sidebar.number_input("G₁₂ [GPa]",0.01)
+    theta = st.sidebar.number_input("θ [deg]",0.01)
 
     # 1) Local lamina compliance [S] dan reduced stiffness [Q]
     nu21 = nu12*E2/E1
